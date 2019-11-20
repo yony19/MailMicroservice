@@ -9,7 +9,6 @@ class SendEmailController extends Controller
 {
     public function sendEmail(Request $request)
     { 
-        dd($request->all());
         $this->validate($request, [
             'email_to' => 'required|email',
             'message' => 'required'

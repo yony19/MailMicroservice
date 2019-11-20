@@ -15,6 +15,6 @@ $router->group(['prefix' => 'api'], function () use ($router) {
         return "API is working.";
     });
     $router->group(['middleware' => 'auth'], function () use ($router) {
-        $router->get('/email/sendEmail', 'SendEmailController@sendEmail');
+        $router->post('/email/sendEmail', 'SendEmailController@sendEmail');
     });
 });
