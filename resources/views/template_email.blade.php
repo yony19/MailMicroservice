@@ -4,7 +4,7 @@
 </style>
 <body>
         <div class="containersss" >
-            <p>
+            <p style="font-size: 14px">
                 {{$descripcion}}
             </p>
             <p>
