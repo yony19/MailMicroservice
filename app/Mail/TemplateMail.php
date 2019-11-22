@@ -6,6 +6,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Http\Request;
+use EmailIterface;
  
 class TemplateMail extends Mailable {
  
@@ -14,9 +16,14 @@ class TemplateMail extends Mailable {
 
     private $mensaje;
 
-    public function __construct($mensaje)
+    public function __construct($request)
     {
         $this->mensaje = $mensaje;
+        /*
+        $email_to = $request->input('email_to');
+        $template = $request->input('template');
+        $url = $request->input('message')['url'];
+        $descripcion = $request->input('message')['description'];*/
     }
 
     public function build()

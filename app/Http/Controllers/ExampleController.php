@@ -13,6 +13,14 @@ class ExampleController extends Controller
     {
         //
     }
-
+    public function index(){
+        return view('template_email')
+                    ->with(
+                        [
+                            'descripcion' => "POR FAVOR PARA RECUPERAR SU CONTRASES A",
+                            'url' => "https://bitzua.com",
+                        ]
+                    );
+    }
     //
 }
